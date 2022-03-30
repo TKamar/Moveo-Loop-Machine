@@ -1,0 +1,275 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: #5f7a61;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#title {
+    text-align: center;
+    font-size: 42px;
+    margin: 10px 0px 10px 0px;
+    
+}
+
+#main-container{
+    
+    display: flex;
+    flex-direction: row;
+}
+
+#control-left-side{
+    width: 500px;
+    height: 710px;
+    background-color: rgb(170, 166, 166);
+
+}
+
+#timeline-right-side{
+    width: 900px;
+    height: 710px;
+    background-color: rgb(112, 125, 150);
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+}
+
+
+.buttons{
+    background-color: rgb(76, 79, 99);
+    margin: 5px;
+    width: auto;
+    height: 30px;
+    border-radius: 5px;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.buttons > button {
+    display: flex;
+    margin: 0px 2px 0px 2px;
+    position: relative;   
+
+}
+
+.tracks-container{
+    background-color: rgb(76, 79, 99);
+    margin: 5px;
+    width: auto;
+    height: 660px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+
+}
+
+.track-holder {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 25px;
+    border: black solid 2px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.track-holder > button {
+    background: none;
+    border: none;
+
+}
+
+.track-holder > .track-name {
+    width: 300px;
+   text-align: center;
+   font-size: 22px;
+   font-weight: bold;
+}
+
+
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin-left: 16px;
+    background-color: none;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+.track1 {
+    background-color: #6FB2D2 ;
+}
+
+.track2 {
+    background-color: #85C88A ;
+}
+
+.track3 {
+    background-color: #EBD671 ;
+}
+
+.track4 {
+    background-color: #EEEEEE ;
+}
+
+.track5 {
+    background-color: #C5D8A4 ;
+}
+
+.track6 {
+    background-color: #C1F4C5 ;
+}
+
+.track7 {
+    background-color: #E0DDAA ;
+}
+
+.track8 {
+    background-color: #BB9981 ;
+}
+
+.track9 {
+    background-color: #534340 ;
+}
+
+
+
+
+.time-runner{
+    background-color: rgb(89, 94, 131);
+    width: 100%;
+    position: relative;
+    height: 30px;
+    padding-bottom: 3px;
+}
+
+#playPosition {
+    width: 1px;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+
+.seek-bar {
+    -webkit-appearance: none;
+    width: 100%;
+    margin-top: 5px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: rgb(70, 66, 66);
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.seek-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 1px;
+    height: 40px;
+    background: black;
+    box-shadow: -400px 0px 0px 400px #898a89;
+}
+
+#audio-holder {
+    background-color: rgb(89, 94, 131);
+    margin: 0px 5px 5px 5px;
+    width: auto;
+    height: 355px;
+
+}
+
+.current-time.audio-duration {
+    font-size: 14px;
+}
+
+.audio-duration {
+    position: absolute;
+    right: 0;
+}
+
+#wave-container {
+    margin: 43px 15px 0px 15px;
+    height: 605px;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+}
+
+.wave {
+    width: 100%;
+    height: 50px;
+    background-color: rgb(206, 209, 248, 0.8);
+}
