@@ -113,7 +113,7 @@
                     <div class="track-holder track9">
                         <div class="track-name">Track9</div>
                         <button type="button" class="btn btn-light track9MuteBtn">
-                            <i class="fa-solid fa-volume-xmark"></i>
+                            <i class="fa-solid fa-volume-xmark" aria-hidden="true"></i>
                             <label class="switch">
                                 <input type="checkbox">
                                 <span class="slider round"></span>
@@ -132,14 +132,14 @@
                         </button>
 
                         <button id="btn-pause" type="button" class="btn btn-dark">
-                            <i class="fa-solid fa-play-pause"></i>
+                            <i class="fa-solid fa-pause"></i>
                         </button>
 
                         <button id="btn-stop" type="button" class="btn btn-dark">
                             <i class="fa-solid fa-stop"></i>
                         </button>
 
-                        <button type="button" class="btn btn-light loopBtn">
+                        <button type="button" class="btn btn-dark loopBtn">
                             <i class="fa-solid fa-rotate-left"></i>
                             <label class="switch">
                                 <input type="checkbox">
@@ -154,7 +154,11 @@
 
             <div id="timeline-right-side">
 
+                <div class="duration">
+                    <div class="current-time">00:00</div>
+                    <div class="audio-duration">00:00</div>
 
+                </div>
                 <div id="wave-container">
                     <div id="playPosition"></div>
                     <div class="wave track1"></div>

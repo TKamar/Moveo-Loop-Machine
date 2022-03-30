@@ -63,6 +63,12 @@ body {
 
 }
 
+.btn-dark :hover {
+    cursor: default;
+    color: white !important;
+    
+}
+
 .tracks-container{
     background-color: rgb(76, 79, 99);
     margin: 5px;
@@ -96,6 +102,14 @@ body {
    text-align: center;
    font-size: 22px;
    font-weight: bold;
+}
+
+.loopBtn {
+    align-items: center;
+}
+
+.loopBtn .switch {
+    height: 32px;
 }
 
 
@@ -201,15 +215,19 @@ body {
     background-color: #534340 ;
 }
 
-
-
-
-.time-runner{
-    background-color: rgb(89, 94, 131);
-    width: 100%;
+.duration{
+    display: flex;
     position: relative;
-    height: 30px;
-    padding-bottom: 3px;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+.audio-duration {
+    position: absolute;
+    right: 0;
+    margin-right: 10px;
 }
 
 #playPosition {
@@ -222,44 +240,8 @@ body {
 
 }
 
-.seek-bar {
-    -webkit-appearance: none;
-    width: 100%;
-    margin-top: 5px;
-    height: 40px;
-    border-radius: 10px;
-    background-color: rgb(70, 66, 66);
-    cursor: pointer;
-    overflow: hidden;
-}
-
-.seek-bar::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    width: 1px;
-    height: 40px;
-    background: black;
-    box-shadow: -400px 0px 0px 400px #898a89;
-}
-
-#audio-holder {
-    background-color: rgb(89, 94, 131);
-    margin: 0px 5px 5px 5px;
-    width: auto;
-    height: 355px;
-
-}
-
-.current-time.audio-duration {
-    font-size: 14px;
-}
-
-.audio-duration {
-    position: absolute;
-    right: 0;
-}
-
 #wave-container {
-    margin: 43px 15px 0px 15px;
+    margin: 0px 15px 0px 15px;
     height: 605px;
     justify-content: space-between;
     display: flex;
