@@ -1,8 +1,4 @@
 
-// let urlMediaArr = ['http://commondatastorage.googleapis.com/codeskulptor-demos/DDR_assets/Kangaroo_MusiQue_-_The_Neverwritten_Role_Playing_Game.mp3',
-//     'http://commondatastorage.googleapis.com/codeskulptor-demos/DDR_assets/Sevish_-__nbsp_.mp3'
-// ];
-
 let urlMediaArr = ['https://www.soundhelix.com/examples/mp3/SoundHelix-Song-15.mp3',
     'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-14.mp3',
     'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-13.mp3',
@@ -12,8 +8,6 @@ let urlMediaArr = ['https://www.soundhelix.com/examples/mp3/SoundHelix-Song-15.m
     'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-9.mp3',
     'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3',
     'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-7.mp3'];
-
-
 
 let playEvents = [];
 let pauseEvents = [];
@@ -29,7 +23,6 @@ let audioDuration = document.querySelector('.audio-duration');
 /** 
  * Load all media files
  *  */
-
 function loadAudio(url) {
     const audioObj = new Audio(url);
     return new Promise((resolve, reject) => {
@@ -127,7 +120,6 @@ function loopAudio(longestAudio) {
             play();
         }
     }, 10);
-
 }
 
 function getLongestAudioDuration(audioFiles) {
@@ -148,6 +140,14 @@ function getLongestAudio(audioFiles) {
         }
     }
     return maxAudio;
+}
+
+function muteMusic(audioFiles) {
+    for (let i = 0; i < audioFiles.length; i++) {
+        let muteBtn = document.querySelector('.track' + (i + 1) + 'MuteBtn input').addEventListener('click', event => {
+            audioFiles[i].muted = event.target.checked;
+        });
+    }
 }
 
 function play() {
@@ -177,13 +177,6 @@ stopBtn.addEventListener('click', event => {
 });
 
 
-function muteMusic(audioFiles) {
-    for (let i = 0; i < audioFiles.length; i++) {
-        let muteBtn = document.querySelector('.track' + (i + 1) + 'MuteBtn input').addEventListener('click', event => {
-            audioFiles[i].muted = event.target.checked;
-        });
-    }
-}
 
 
 
